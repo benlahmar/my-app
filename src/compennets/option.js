@@ -1,9 +1,10 @@
-import { useState } from "react";
-
+import { useContext, useState } from "react";
+import { ThemeContext } from "../context/context";
+import '../css/option.css'
 const  Option = (props) => {
 
     const [ischeked,SetIscheked]= useState(false);
-
+    const val = useContext(ThemeContext)
     const change= ()=>
         {
             SetIscheked(!ischeked)
@@ -11,7 +12,7 @@ const  Option = (props) => {
             props.Answerchange(props.option.id);
         }
     return ( 
-        <div>
+        <div  className={val}>
         <input type="checkbox"  onChange={change} 
         checked={props.isselected==props.option.id} 
         id={props.option.id} 

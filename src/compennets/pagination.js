@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../css/navigation.css'
+import withTheme from "./Hocs/withtheme";
 const Pagination = (props) => {
 
     const [p,setP]=useState(0);
@@ -27,4 +28,4 @@ const Pagination = (props) => {
      );
 }
  
-export default Pagination;
+export default withTheme(Pagination);

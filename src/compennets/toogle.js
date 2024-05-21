@@ -1,10 +1,12 @@
-const Toogle = () => {
-    return ( <>
-     <div class="form-check form-switch btn">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label class="form-check-label" for="flexSwitchCheckDefault">switch </label>
+const Toggle = ({changeAny}) => {
+
+    return ( 
+    <>
+     <div className="form-check form-switch btn">
+  <input onChange={changeAny} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">switch </label>
 </div>
     </> );
 }
  
-export default Toogle;
+export default Toggle;
