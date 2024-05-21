@@ -32,6 +32,11 @@ const changeconfig=(ec,val)=>{
     SetConf({...conf,[ec]:val})
     console.log(conf)
 }
+const onsubmit=()=>{
+    setMode('submit');
+    console.log(answers);
+    
+}
 
     return ( 
         <div >
@@ -41,7 +46,7 @@ const changeconfig=(ec,val)=>{
             <div >
 <button type="button" onClick={()=>setMode('quiz')} className="btn btn-outline-primary">Quiz</button>
 <button type="button" hidden={conf.allowReview} onClick={()=>setMode('review')} className="btn btn-outline-secondary">Review</button>
-<button type="button" onClick={()=>setMode('submit')} className="btn btn-outline-success">Submit</button>
+<button type="button" onClick={()=>onsubmit()} className="btn btn-outline-success">Submit</button>
             </div>
             
             <Pagination  notifier={recuper} allowBack={conf.allowBack}  />

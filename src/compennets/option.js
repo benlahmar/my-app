@@ -14,7 +14,9 @@ const  Option = (props) => {
         <div>
         <input type="checkbox"  onChange={change} 
         checked={props.isselected==props.option.id} 
-        id={props.option.id} />
+        id={props.option.id} 
+        disabled={props.mode=='submit'}
+        />
             {props.option.name}
         </div>
      );
