@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const withTimer=(Component, limite)=>{
 
-    return function WithTimer(props){
+    return (props)=>{
 
       const  [time,setTime]=useState(limite);
 
@@ -16,13 +16,14 @@ const withTimer=(Component, limite)=>{
                             alert("over")
                             return 0;
                         }
-                        console.log(prev)
+                       // const randomColor = `hsla(${Math.random() * 360}, 100%, 50%, 0.2)`;
+                       // document.body.style.backgroundColor = randomColor;
                         return prev-1;
                 })
             },1000);
             return ()=>{
                 clearInterval(timer)
-            }
+            };
 
         },[]);
         return (

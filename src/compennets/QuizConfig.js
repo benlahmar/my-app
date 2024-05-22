@@ -17,17 +17,17 @@ const change=(e)=>{
     return ( <details className="btn btn-outline-primary">
     
     <summary>Configuration</summary>
-    <ul class="list-group">
-  <li class="list-group-item">
+    <ul className="list-group">
+  <li className="list-group-item">
     <input type="checkbox" name="allowBack" onChange={(e)=>change(e)} />AllowBack
   </li>
-  <li class="list-group-item">
+  <li className="list-group-item">
   <input type="checkbox" name="allowReview"  onChange={(e)=>change(e)} />AllowReview
   </li>
-  <li class="list-group-item">
+  <li className="list-group-item">
   <input type="checkbox" name="autoMove"  onChange={(e)=>change(e)} />autoMove
   </li>
-  <li class="list-group-item">
+  <li className="list-group-item">
   duration: <input type="number" name="duration"  onChange={(e)=>change(e)} />
   </li>
  </ul>

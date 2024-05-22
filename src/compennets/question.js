@@ -11,7 +11,7 @@ const Question = (props) => {
             {props.question.name}
 
             {props.question.options.map( (o)=>(props.mode=='quiz'|| props.mode=='submit') && (
-               <Option mode={props.mode} option={o} isselected={props.selectedoption} Answerchange={Answerchange} />
+             <div key={o.id+'-'+props.question.id}>  <Option  mode={props.mode} option={o} isselected={props.selectedoption} Answerchange={Answerchange} /></div>
             ))}
             
         </div>
